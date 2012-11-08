@@ -1,35 +1,26 @@
 <?php
+/**
+ *  Mail Utils
+ *  mail(to,subject,message,headers,parameters)
+ */
 
     class Mail{
-
-        public $url;
-        private $subject;
-        private $content;
-
-        public function __construct( $url='' , $subject='' , $content='' ){
-            $this->url = $url;
-            $this->subject = $subject;
-            $this->content = $content;
-            $this->fw = "jing";
+        
+        public function __construct(){
+        
         }
         
-        function __set( $prop , $value ){
-            if( isset($this->$prop ) ){
-                echo $prop."  isset";
-            } else {
-                $this->$prop = "wwww";
-                echo $prop."  is no set ";
-            }    
+        public function send(){
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-type: text/plain; charset=utf-8\r\n";
+            $headers .= "Content-Transfer-Encoding: 8bit\r\n";
+            $subject = "=?UTF-8?B?".base64_encode("主题邮件 ")."?=";
+            mail("caopw84@gmail.com",$subject,"消息",$headers);
+        
         }
 
-        function __get( $prop ){
-            return 1;
-        }
-
-        public function pt(){
-            $this->url = "dw@gmail.com";
-        }
     }
-    
-    $mail = new Mail("davidnk@gmail.com" , "zhuti" , "neirong");
+
+    $mail = new Mail();
+    $mail->send();
 ?>
