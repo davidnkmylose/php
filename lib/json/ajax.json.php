@@ -13,6 +13,8 @@
         $jsonString .= fread( $handle , 1024 );
     }
     echo "jsonString : ".$jsonString."\n";
+    $obj = json_decode($jsonString );
+    var_dump( $obj );
     echo json_encode($data);
     fclose( $handle );
 ?>
