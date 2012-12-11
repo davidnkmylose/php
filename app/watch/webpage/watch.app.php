@@ -1,7 +1,5 @@
 <?php
-	$url = "http://zhidao.baidu.com/c/lenovo/mis/answer_system/answer_list/";
-	//$url = "http://localhost:8080/php/app/watch/webpage/test.php";
-	//$url = "http://zhidao.baidu.com/";
+	$url = "http://localhost:8080/php/app/watch/webpage/test.php";
 	$ch = curl_init();	
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
