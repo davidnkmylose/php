@@ -1,0 +1,10 @@
+{
+    "aa" : 13,
+    "msg" : {
+        "name" : "davidnk",
+        "sex" : "M",
+        "age" : 10
+    },
+    "addr" : "davidnk@jing.com"
+
+}
